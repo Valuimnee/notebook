@@ -1,0 +1,11 @@
+.short-label{
+    min-width: 80px;
+}
+.login-block{
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+form[name="login"]{
+    margin:0 auto;
+    max-width: 530px;
+}

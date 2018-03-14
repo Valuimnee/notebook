@@ -1,0 +1,44 @@
+.bd-color {
+    background-color: deepskyblue;
+}
+form {
+    margin: 2rem auto;
+    max-width: max-content;
+}
+.form-inline{
+    margin: 0;
+    max-width: none;
+}
+.menu-user{
+    min-width: 150px;
+}
+form[name="locations-form"] {
+    margin: 2rem auto;
+}
+.location-card{
+    margin:1rem;
+}
+.bicycle-card{
+    margin:1rem;
+    min-height: 289px;
+}
+.clickable{
+    cursor: pointer;
+}
+.custom-select {
+    max-width: 400px;
+}
+.textarea{
+    max-width: 600px;
+}
+.note-div{
+    margin: 2rem auto;
+    max-width: max-content;
+}
+.medium-label{
+    min-width: 125px;
+}
+label{
+    margin-bottom: 0;
+    padding-top: 8px;
+}
