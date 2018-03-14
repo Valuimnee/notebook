@@ -26,7 +26,6 @@ public class NoteController {
     @RequestMapping(value = "/notes")
     public String findNotes(ModelMap model, @SessionAttribute("id") Long id) {
         List<Note> notes = noteService.findByUserId(id);
-        System.err.println(notes);
         if(notes==null||notes.isEmpty()){
             model.addAttribute(RequestConstant.MESSAGE, RequestConstant.NO_NOTES);
         }else{
