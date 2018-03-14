@@ -5,10 +5,12 @@
     <div class="container nav-fill filler">
         <c:choose>
             <c:when test="${sessionScope.role=='administrator'}">
-                <div class="nav-item"><a class="nav-link text-left" href="/jsp/cabinet.jsp"><fmt:message key="main-nav.admin-cabinet"/></a></div>
+                <div class="nav-item"><a class="nav-link text-left" href="/jsp/cabinet.jsp">
+                    <fmt:message key="main-nav.admin-cabinet"/></a></div>
             </c:when>
             <c:otherwise>
-                <div class="nav-item"><a class="nav-link text-left" href="/index.jsp"><fmt:message key="main-nav.main-page"/></a></div>
+                <div class="nav-item"><a class="nav-link text-left" href="/index.jsp">
+                    <fmt:message key="main-nav.main-page"/></a></div>
             </c:otherwise>
         </c:choose>
     </div>
@@ -16,7 +18,6 @@
         <ul class="navbar-nav">
             <li class="nav-item dropdown mr-md-2">
                 <form class="form-inline" method="post" action="/lang">
-                    <input type="hidden" name="command" value="language"/>
                     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false"><fmt:message key="main-nav.language"/></button>
                     <div class="dropdown-menu">
@@ -33,7 +34,7 @@
                 <c:otherwise>
                     <li class="nav-item">
                         <form class="form-inline" name="logout" method="post" action="/logout">
-                            <button class="btn nav-link bd-color border-0" type="submit" name="command" value="logout">
+                            <button class="btn nav-link bd-color border-0" type="submit">
                                 <fmt:message key="main-nav.logout"/></button>
                         </form>
                     </li>
