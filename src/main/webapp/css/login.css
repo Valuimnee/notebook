@@ -1,5 +1,6 @@
 .short-label{
     min-width: 80px;
+    margin-right: 10px;
 }
 .login-block{
     margin: 0 auto;

@@ -1,4 +1,4 @@
-package com.tsalapova.notebook.main;
+package com.tsalapova.notebook.initializer;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import java.util.Properties;
  * @version 1.0, 3/14/2018
  */
 @Configuration
-@ComponentScan("com.tsalapova.notebook.main")
+@ComponentScan("com.tsalapova.notebook.initializer")
 @EnableTransactionManagement
 @PropertySource(value = "classpath:db.properties")
 public class DbConfig {

@@ -1,13 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fld" uri="fldlib" %>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/js/submit.js"></script>
+<script type="text/javascript" src="/js/note.js"></script>
 <form class="no-resubmit" name="add-note-form" method="post" action="/add-note">
     <input type="hidden" name="submitted" value="false"/>
     <p class="mb-2 text-center"><label><b><fmt:message key="note.add-greeting"/></b></label></p>
     <c:if test="${requestScope.wrong=='wrong-info'}"><p class="mb-2"><fmt:message key="note.wrong-info"/></p></c:if>
-    <fld:input type="product-name" labelType="medium" name="title">
+    <fld:input type="product-name" labelType="short" name="title">
         <jsp:attribute name="label"><fmt:message key="note.title"/></jsp:attribute><jsp:body/>
     </fld:input>
     <div class="mb-2 form-group">

@@ -6,7 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=utf-8" language="java" pageEncoding="UTF-8" %>
-<nav class="navbar navbar-expand-md navbar-collapse collapse navbar-light bd-color pl-md-4">
+<nav class="navbar navbar-expand-md navbar-collapse collapse navbar-light bd-color pl-md-4 menu-nav">
     <div class="navbar-collapse container-fluid pr-0">
         <c:if test="${sessionScope.role=='user'}">
             <ul class="navbar-nav  mr-auto pr-0">

@@ -7,6 +7,8 @@ import com.tsalapova.notebook.util.PageConstant;
 import com.tsalapova.notebook.util.RequestConstant;
 import com.tsalapova.notebook.util.SessionConstant;
 import com.tsalapova.notebook.validator.ParameterValidator;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -24,6 +26,7 @@ import java.util.Enumeration;
  */
 @Controller
 public class UserController {
+    private static Log log = LogFactory.getLog(UserController.class);
 
     private UserService userService;
 
@@ -47,6 +50,7 @@ public class UserController {
             return PageConstant.LOGIN;
         }
         setUserSession(session, user);
+        log.info("User "+login+" logged in.");
         return PageConstant.MAIN;
     }
 
@@ -73,6 +77,7 @@ public class UserController {
             return PageConstant.REGISTER;
         }
         setUserSession(session, user);
+        log.info("User "+login+" registered.");
         return PageConstant.MAIN;
     }
 

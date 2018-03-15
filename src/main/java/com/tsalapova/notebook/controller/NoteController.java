@@ -4,7 +4,10 @@ import com.tsalapova.notebook.entity.Note;
 import com.tsalapova.notebook.service.NoteService;
 import com.tsalapova.notebook.util.PageConstant;
 import com.tsalapova.notebook.util.RequestConstant;
+import com.tsalapova.notebook.util.SessionConstant;
 import com.tsalapova.notebook.validator.ParameterValidator;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,6 +23,7 @@ import java.util.List;
  */
 @Controller
 public class NoteController {
+    private static Log log = LogFactory.getLog(NoteController.class);
 
     private NoteService noteService;
 
@@ -29,7 +33,7 @@ public class NoteController {
     }
 
     @RequestMapping(value = "/notes")
-    public String findNotes(ModelMap model, @SessionAttribute("id") Long id) {
+    public String findNotes(ModelMap model, @SessionAttribute(SessionConstant.ID) Long id) {
         List<Note> notes = noteService.findByUserId(id);
         if (notes == null || notes.isEmpty()) {
             model.addAttribute(RequestConstant.MESSAGE, RequestConstant.NO_NOTES);
@@ -58,6 +62,7 @@ public class NoteController {
             model.addAttribute(RequestConstant.CONTENT, RequestConstant.TAKE_NOTE);
         }
         noteService.add(note);
+        log.info("Note added");
         return PageConstant.MAIN;
     }
 
@@ -70,7 +75,7 @@ public class NoteController {
     }
 
     @RequestMapping(value = "/edit-note")
-    public String addNote(ModelMap model, @SessionAttribute("id") Long id, @RequestParam("note-id") Long noteId,
+    public String editNote(ModelMap model, @SessionAttribute("id") Long id, @RequestParam("note-id") Long noteId,
                           @RequestParam("title") String title, @RequestParam("content") String content) {
         Note note = new Note();
         note.setUserId(id);
@@ -82,12 +87,14 @@ public class NoteController {
             model.addAttribute(RequestConstant.CONTENT, RequestConstant.NOTE);
         }
         noteService.update(note);
+        log.info("Note edited");
         return PageConstant.MAIN;
     }
 
     @RequestMapping(value = "/delete-note")
     public String deleteNote(@RequestParam("note-id") Long noteId) {
         noteService.delete(noteId);
+        log.info("Deleted note");
         return PageConstant.MAIN;
     }
 

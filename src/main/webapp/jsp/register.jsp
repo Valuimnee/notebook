@@ -13,7 +13,6 @@
 <body>
 <jsp:include page="/jsp/component/main-nav.jsp"/>
 <jsp:include page="/jsp/component/header.jsp"/>
-<%--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>--%>
 <script type="text/javascript" src="/js/submit.js"></script>
 <script type="text/javascript" src="/js/register.js"></script>
 <main class="container-fluid mb-5">

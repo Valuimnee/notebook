@@ -1,4 +1,4 @@
-package com.tsalapova.notebook.main;
+package com.tsalapova.notebook.initializer;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
