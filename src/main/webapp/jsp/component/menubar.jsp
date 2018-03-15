@@ -12,20 +12,18 @@
             <ul class="navbar-nav  mr-auto pr-0">
                 <li class="nav-item dropdown mr-md-2">
                     <form class="form-inline" name="notes" method="post" action="/notes">
-                        <button type="submit" class="btn btn-primary">
-                        <fmt:message key="menubar.notes"/></button>
+                        <button type="submit" class="btn btn-primary"><fmt:message key="menubar.notes"/></button>
                     </form>
                 </li>
                 <li class="nav-item dropdown mr-md-2">
                     <form class="form-inline" name="take-note" method="post" action="/take-note">
-                        <button type="submit" class="btn btn-primary">
-                            <fmt:message key="menubar.take-note"/></button>
+                        <button type="submit" class="btn btn-primary"><fmt:message key="menubar.take-note"/></button>
                     </form>
                 </li>
             </ul>
             <div class="nav-item dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split menu-user" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">${sessionScope.login}</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split menu-user"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${sessionScope.login}</button>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div><form class="form-inline" name="take-note" method="post" action="/account">
                         <button class="dropdown-item" type="submit"><fmt:message key="menubar.account"/>

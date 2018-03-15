@@ -3,16 +3,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar navbar-fixed-top navbar-expand navbar-light bd-color">
     <div class="container nav-fill filler">
-        <c:choose>
-            <c:when test="${sessionScope.role=='administrator'}">
-                <div class="nav-item"><a class="nav-link text-left" href="/jsp/cabinet.jsp">
-                    <fmt:message key="main-nav.admin-cabinet"/></a></div>
-            </c:when>
-            <c:otherwise>
-                <div class="nav-item"><a class="nav-link text-left" href="/index.jsp">
-                    <fmt:message key="main-nav.main-page"/></a></div>
-            </c:otherwise>
-        </c:choose>
+        <div class="nav-item"><a class="nav-link text-left" href="/index.jsp">
+            <fmt:message key="main-nav.main-page"/></a></div>
     </div>
     <div class="container-fluid navbar-collapse collapse navbar-responsive-collapse justify-content-end">
         <ul class="navbar-nav">
@@ -34,8 +26,7 @@
                 <c:otherwise>
                     <li class="nav-item">
                         <form class="form-inline" name="logout" method="post" action="/logout">
-                            <button class="btn nav-link bd-color border-0" type="submit">
-                                <fmt:message key="main-nav.logout"/></button>
+                            <button class="btn nav-link bd-color border-0" type="submit"><fmt:message key="main-nav.logout"/></button>
                         </form>
                     </li>
                 </c:otherwise>

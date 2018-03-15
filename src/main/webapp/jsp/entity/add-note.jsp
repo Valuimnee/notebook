@@ -15,6 +15,6 @@
         <textarea class="form-control" id="content" rows="3" cols="5" name="content" required="required"></textarea>
     </div>
     <div class="mb-lg-2 text-right col-9">
-        <button class="btn" type="submit" name="command" value="add-bicycle"><fmt:message key="note.save"/></button>
+        <button class="btn" type="submit"><fmt:message key="note.save"/></button>
     </div>
 </form>

@@ -18,7 +18,6 @@
         <fld:input type="password" labelType="long" name="new-password2">
             <jsp:attribute name="label"><fmt:message key="account.new-password2"/></jsp:attribute><jsp:body/>
         </fld:input>
-        <p class="text-right col-9"><button class="btn" type="submit" name="command" value="edit-account">
-            <fmt:message key="account.save-changes"/></button></p>
+        <p class="text-right col-9"><button class="btn" type="submit"><fmt:message key="account.save-changes"/></button></p>
     </form>
 </div>

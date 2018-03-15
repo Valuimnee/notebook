@@ -13,7 +13,7 @@
     <tag>
         <description>Defines input field for different types of input, for example login, password, name</description>
         <name>input</name>
-        <tag-class>com.tsalapova.springaop.tag.InputFieldTag</tag-class>
+        <tag-class>com.tsalapova.notebook.tag.InputFieldTag</tag-class>
         <body-content>scriptless</body-content>
         <attribute>
             <name>type</name>

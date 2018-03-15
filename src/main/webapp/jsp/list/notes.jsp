@@ -12,13 +12,8 @@
                             <div class="card-header text-center text">${note.title}</div>
                             <div class="card-body">
                                 <p class="text-center text mb-2">${note.content}</p>
-                                <button class="btn" type="submit" name="note-id" value="${note.noteId}"
-                                        <c:if test="${sessionScope.role!='user'}">hidden</c:if> >
+                                <button class="btn" type="submit" name="note-id" value="${note.noteId}">
                                     <fmt:message key="note.view"/></button>
-                                <c:if test="${sessionScope.role=='administrator'}">
-                                    <button class="btn" type="submit" name="note-id" value="${note.noteId}">
-                                        <fmt:message key="bicycle.view"/></button>
-                                </c:if>
                             </div>
                         </div>
                     </div>

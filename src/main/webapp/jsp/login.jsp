@@ -25,8 +25,7 @@
             <fld:input type="password" labelType="short" name="password" required="required">
                 <jsp:attribute name="label"><fmt:message key="login.password"/></jsp:attribute><jsp:body/>
             </fld:input>
-            <p class="text-center"><button class="btn" type="submit" name="command" value="login">
-                <fmt:message key="login.button"/></button>
+            <p class="text-center"><button class="btn" type="submit"><fmt:message key="login.button"/></button>
         </form>
     </div>
 </main>

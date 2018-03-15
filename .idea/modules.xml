@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springaop.iml" filepath="$PROJECT_DIR$/springaop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebook.iml" filepath="$PROJECT_DIR$/notebook.iml" />
     </modules>
   </component>
 </project>

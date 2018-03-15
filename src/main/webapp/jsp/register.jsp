@@ -35,8 +35,7 @@
             <fld:input type="password" labelType="long" name="password2" required="required">
                 <jsp:attribute name="label"><fmt:message key="register.password2"/></jsp:attribute><jsp:body/>
             </fld:input>
-            <p class="text-right col-9"><button class="btn" type="submit" name="command" value="register">
-                <fmt:message key="register.register"/></button></p>
+            <p class="text-right col-9"><button class="btn" type="submit"><fmt:message key="register.register"/></button></p>
         </form>
     </div>
 </main>
