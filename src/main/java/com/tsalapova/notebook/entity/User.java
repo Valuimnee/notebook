@@ -11,6 +11,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "user")
 public class User implements Serializable {
+    private static final long serialVersionUID = 8241092056932759568L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
